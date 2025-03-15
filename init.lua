@@ -1,34 +1,20 @@
-local lspconfig = require('lspconfig')
 
-local options = { silent = true, remap = true, }
+require('options')
+require('keymaps')
 
--- allows case insensitive <TAB> completion to 
-vim.opt.ignorecase = true
+require("config.lazy")
 
-vim.keymap.set('n', '<space>', '<nop>', { silent = true, remap = false })
-vim.keymap.set('n', '<space>', '<leader>', options)
-
-vim.keymap.set('n', '<leader>q', ':q!<cr>', options)
-vim.keymap.set('n', '<leader>w', ':w<cr>', options)
-
-vim.keymap.set('n', '<leader>ei', ':e $MYVIMRC<cr>', options)
-
-vim.keymap.set('n', '<leader>fe', vim.lsp.buf.format, options)
-vim.keymap.set('n', '<leader>fo', ':Explore<CR>', options)
-vim.keymap.set('n', '<leader><space>', '<C-^>', options)
-
-local lsp_servers = {
-	"pyright",
-	"ruff_lsp",
-}
-
-vim.cmd([[
-colorscheme catppuccin-latte
-]])
-
-for _, lsp in ipairs(lsp_servers) do
-	lspconfig[lsp].setup({})
-end
-
--- require'lspconfig'.pyright.setup{}
--- require'lspconfig'.ruff_lsp.setup{}
+-- require('paq-plugins')
+--
+-- require('plugins.lsp')
+--
+-- vim.cmd.colorscheme('catppuccin-latte')
+--
+-- require('snippets')
+--
+-- vim.cmd([[
+-- aug ReactIndentSettings
+--   autocmd!
+--   autocmd FileType javascript,typescript,typescriptreact,javascriptreact setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+-- aug END
+-- ]])
