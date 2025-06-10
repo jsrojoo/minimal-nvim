@@ -1,7 +1,7 @@
 return {
-  "savq/melange-nvim",
+  "https://github.com/hardselius/warlock",
   config = function()
-    vim.opt.background = 'light'
-    vim.cmd.colorscheme 'melange'
+    vim.opt.background = 'dark'
+    vim.cmd.colorscheme 'warlock'
   end
 }
