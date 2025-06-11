@@ -21,3 +21,11 @@ vim.opt.autoindent = true
 vim.opt.signcolumn = 'yes:3'
 
 vim.opt.clipboard = 'unnamedplus'
+
+vim.opt.list = true
+vim.opt.listchars = {
+  -- tab = "│·",
+  extends = "⟩",
+  precedes = "⟨",
+  trail = "·",
+}
