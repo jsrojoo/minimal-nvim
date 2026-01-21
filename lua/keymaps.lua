@@ -23,7 +23,7 @@ vim.keymap.set('n', '<leader>ep', ':e ' .. LUA_PLUGINS .. '<cr>', default_option
 vim.keymap.set('n', '<leader>fe', vim.lsp.buf.format, default_options)
 
 vim.keymap.set('n', '<leader>fo', ':Oil<CR>', default_options)
-vim.keymap.set('n', '<leader><space>', '<C-^>', default_options)
+vim.keymap.set('n', '<tab><tab>', '<C-^>', default_options)
 
 vim.keymap.set('n', '<leader>fa', ':FzfLua files<cr>', default_options)
 vim.keymap.set('n', '<leader>fg', ':FzfLua git_files<cr>', default_options)
